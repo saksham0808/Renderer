@@ -21,10 +21,12 @@ class player:
     def move(self, r, theta, phi):
         theta   = theta*3.1415/180
         phi     = phi*3.1415*180
-        self.position.x += int(r*sin(theta)*cos(phi))
-        self.position.y += int(r*sin(theta)*sin(phi))
-        self.position.z += int(r*cos(theta))
+        self.position.x += (r*sin(theta)*cos(phi))
+        self.position.y += (r*sin(theta)*sin(phi))
+        self.position.z += (r*cos(theta))
 
     def rotate(self, angle):
         self.direction += angle
 
+    def findfinal(self, pt):
+        return pt

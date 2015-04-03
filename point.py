@@ -14,6 +14,9 @@ class point:
         self.y += p.y
         self.z += p.z
 
+    def add_ret(self,p):
+        return point(self.x+p.x, self.y+p.y, self.z+p.z)
+
     def mul(self,p):
         self.x *= p
         self.y *= p
@@ -29,3 +32,6 @@ class point:
         self.x = self.x * dist/self.y
         self.z = self.z * dist/self.y
         self.y = dist
+
+    def project_ret(self, dist):
+        return point(self.x*dist/self.y, dist, self.z*dist/self.y)
