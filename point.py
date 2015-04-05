@@ -12,8 +12,6 @@ class point:
         self.z = self.z * dist/self.y
         self.y = dist
 
-    def project_ret(self, dist):
-        return point(self.x*dist/self.y, dist, self.z*dist/self.y)
 
     def mod(self):
         return (self.x**2 + self.y**2 + self.z**2)**0.5
@@ -42,3 +40,6 @@ def dot(p1, p2):
 
 def cross(p1, p2):
     return point(p1.y*p2.z-p1.z*p2.y, p1.z*p2.x-p2.z*p1.x, p1.x*p2.y-p1.y*p2.x)
+
+def project(p1, dist):
+    return point(p1.x*dist/p1.y, dist, p1*dist/p1.y)
