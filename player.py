@@ -11,8 +11,8 @@ class player:
 	self.xFOV = 90 
 	# Vertical field of view in degrees
 	self.xFOV = 90
-
-	self.ppdist = 250
+        # Picture plane distance
+	self.ppdist = 350
 
     # To move player
     # r can be positive or negative
